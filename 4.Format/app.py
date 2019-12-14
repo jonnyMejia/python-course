@@ -1,15 +1,16 @@
+from datetime import datetime
 #.Format
-    #Orden
+#Orden
 Hola="Hola"
 Mundo="Mundo"
 print("{1} {0}".format(Hola,Mundo))
-    #Value Conversion
+
+#Value Conversion
 class Data(object):
     def __str__(self):
         return "str"
     def __repr__(self):
         return "repr"    
-    
 
 #metodo __repr__ define el nombre del objeto enASCI
 #metodo __str__ es como el tostring del object
@@ -46,7 +47,7 @@ print("{: d}".format(100))
 print("{:= 10d}".format(-100))
 
 #Date time 
-from datetime import datetime
+
 print('{:%Y-%m-%d %H:%M}'.format(datetime(2001, 2, 3, 4, 5)))
 
 
