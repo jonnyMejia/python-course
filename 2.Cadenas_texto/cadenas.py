@@ -29,6 +29,9 @@ x=cadena2.split(',')
 for e in x :
     print(e)
 print("*****************")
+# Funcion Join
+cadena3="-".join(x)
+print(cadena3)
 #Imprimir Variables de texto
 Nombre="Jonny "
 Apellido="Mejia"
