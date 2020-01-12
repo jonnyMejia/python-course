@@ -30,6 +30,7 @@ for e in x :
     print(e)
 print("*****************")
 # Funcion Join
+# Pera-Uva-Pepino-Manzana
 cadena3="-".join(x)
 print(cadena3)
 #Imprimir Variables de texto
