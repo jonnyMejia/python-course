@@ -31,6 +31,9 @@ for key in colores:
 verde green """
 for key,valor in colores.items():
     print(key,valor)
+# se obtiene el indice de posicion junto con su valor
+for k,v in enumerate([1,2,3,4]):
+    print(k,v)
 
 # Copy() retorna una copia del diccionario actual
 dic2=colores.copy()
@@ -57,7 +60,9 @@ print(dic1)
 
 # Metodo dict Recibe como parametro una represenatcio de un diccionario 
 diccionario=dict(nombre='nestor', apellido='Plasencia', edad=22)
+dictionary=dict([("nombre","nestor"),("apellido","plasencia"),("edad",22)])
 print(diccionario)
+print(dictionary)
 # dic → {‘nombre’ : 'nestor', ‘apellido’ : 'Plasencia', ‘edad’ : 22}
 
 # Recibe ZIP dos parametros iterables ya sea una cadena o uan lista o tupla,ambos deben tenr el mismo numero de elementos
