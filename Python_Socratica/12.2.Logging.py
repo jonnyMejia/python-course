@@ -1,23 +1,30 @@
-import logging
-logging.basicConfig(filename="employee",level=logging.INFO,format="%(levelname)s:%(message)s")
+import logging 
+import math
 
-class Employee:
+# Configure logging 
+logging.basicConfig(
+    filename="test.log",
+    level=logging.DEBUG,
+    format="%(asctime)s:%(levelname)s:%(message)s"
+)
+logger = logging.getLogger()
 
-    def __init__(self,first,last):
-        self.first=first
-        self.last=last
-        
-        logging.info("Created Employee: {} {}".format(self.fullname,self.email))
+def quadratic_formula(a, b, c):
+    
+    """Return the solutions to the equation ax² + bx + c = 0."""
+    logger.info("quadratic_formula({}, {},{})".format(a, b, c))
+    
+    # Compute the discriminant
+    logger.debug("# Compute the discriminant")
+    disc = b**2 - 4*a*c
+    
+    # Compute the two roots
+    root1 = (-b + math.sqrt(disc)) / (2*a)
+    root2 = (-b - math.sqrt(disc)) / (2*a)
 
-    @property
-    def email(self):
-        return "{}.{}@email.com".format(self.first,self.last)
+    # Return the roots
+    logger.debug("# Return the roots")
+    return (root1,root2)
 
-    @property
-    def fullname(self):
-        return "{} {}".format(self.first,self.last)
-
-emp_1 = Employee("Jhon","Smith")
-emp_2 = Employee("Corey","Schafer")
-emp_3 = Employee("Jane","Doe")
-
+# Execute
+roots = quadratic_formula(1, 0, -4)
